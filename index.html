@@ -8,15 +8,23 @@
   <title>Custom Chocolate Pack</title>
 </head>
 <body>
-  <h1>Custom Chocolate Pack</h1>
-  <div id="chocolate-options">
-    <!-- Display available chocolates with checkboxes -->
+  <div class="container">
+    <header>
+      <h1>Custom Chocolate Pack</h1>
+    </header>
+    <div class="main-content">
+      <section id="chocolate-options">
+        <!-- Display available chocolates with checkboxes -->
+      </section>
+      <section id="selected-chocolates">
+        <!-- Display selected chocolates and quantities -->
+      </section>
+    </div>
+    <footer>
+      <p>Total Price: $<span id="total-price">0.00</span></p>
+      <button onclick="calculateTotal()">Calculate Total</button>
+    </footer>
   </div>
-  <div id="selected-chocolates">
-    <!-- Display selected chocolates and quantities -->
-  </div>
-  <p>Total Price: $<span id="total-price">0.00</span></p>
-  <button onclick="calculateTotal()">Calculate Total</button>
 
   <script src="script.js"></script>
 </body>

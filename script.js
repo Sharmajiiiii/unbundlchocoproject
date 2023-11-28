@@ -52,6 +52,15 @@ function toggleChocolate(chocolate) {
       return;
     }
 
+    // Check if adding this chocolate exceeds the limit of 8 items
+    const totalSelectedItems = selectedChocolates.reduce((total, item) => total + item.quantity, 0);
+
+    if (totalSelectedItems + quantity > 8) {
+      alert('The total number of chocolates cannot exceed 8 items.');
+      checkbox.checked = false;
+      return;
+    }
+
     selectedChocolates.push({ ...chocolate, quantity });
   } else {
     selectedChocolates = selectedChocolates.filter(item => item.id !== chocolate.id);
